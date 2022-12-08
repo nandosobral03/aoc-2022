@@ -85,6 +85,8 @@ const setVisibility = (forest, direction) => {
         }
     }
 }
+
+
 const part2 = (line) => {
     const forest = input.split("\n").map(line => line.split("").filter(x => x != " ").map(char => {
         return {
