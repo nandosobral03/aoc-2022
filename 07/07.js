@@ -82,11 +82,7 @@ const anotate_tree_with_size = (tree) => {
     
 
 const flatten_directories = (tree) => {
-    const obj = {
-        name : tree.name,
-        size: tree.size
-    }
-    return [obj, ...tree.children.map(child => flatten_directories(child)).flat()];
+    return [{name : tree.name,size: tree.size}, ...tree.children.map(child => flatten_directories(child)).flat()];
 }
 
 
